@@ -20,10 +20,10 @@ const Login = ({navigation}) => {
       <Content>
         <Logo source={logoImage} />
         <Text>A educação financeira nunca foi tão fácil</Text>
-        <Button onPress={handleLogin}>
+        <Button onPress={() => {}}>
           <ButtonText>Cadastre-se</ButtonText>
         </Button>
-        <LinkText onPress={() => {}}>Já tem conta? Entre aqui</LinkText>
+        <LinkText onPress={handleLogin}>Já tem conta? Entre aqui</LinkText>
       </Content>
     </Container>
   );

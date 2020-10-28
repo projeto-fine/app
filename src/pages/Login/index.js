@@ -6,7 +6,12 @@ const Login = ({navigation}) => {
     <Container>
       <Heading>Que bom ter você de volta!</Heading>
       {/* TODO cognito login w google */}
-      <Button onPress={() => {}} title="CONTINUE WITH GOOGLE" />
+      <Button
+        onPress={() => {
+          navigation.navigate('UserArea');
+        }}
+        title="CONTINUE WITH GOOGLE"
+      />
     </Container>
   );
 };
