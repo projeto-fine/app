@@ -12,7 +12,7 @@ import {
 
 const Login = ({navigation}) => {
   const handleLogin = () => {
-    navigation.navigate('Login');
+    navigation.navigate('UserArea');
   };
 
   return (
@@ -20,10 +20,10 @@ const Login = ({navigation}) => {
       <Content>
         <Logo source={logoImage} />
         <Text>A educação financeira nunca foi tão fácil</Text>
-        <Button onPress={() => {}}>
-          <ButtonText>Cadastre-se</ButtonText>
+        <Button onPress={handleLogin}>
+          <ButtonText>Entrar</ButtonText>
         </Button>
-        <LinkText onPress={handleLogin}>Já tem conta? Entre aqui</LinkText>
+        <LinkText onPress={() => {}}>Não tem conta? Cadastre-se aqui</LinkText>
       </Content>
     </Container>
   );

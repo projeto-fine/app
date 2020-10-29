@@ -11,6 +11,7 @@ export const Container = styled.View`
 export const UserIcon = styled.Image`
   width: 45px;
   height: 45px;
+  border-radius: 100px;
 `;
 
 export const Header = styled.View`
@@ -23,13 +24,13 @@ export const Column = styled.View`
   margin-left: 10px;
 `;
 
-export const Title = styled.Text`
+export const Name = styled.Text`
   font-family: 'Open Sans';
   font-weight: 600;
   font-size: 14px;
 `;
 
-export const Subtitle = styled.Text`
+export const Title = styled.Text`
   font-family: 'Open Sans';
   font-weight: 300;
   font-size: 12px;
@@ -57,4 +58,9 @@ export const SaveIcon = styled.Image`
   width: 18px;
   height: 20px;
   margin-left: 10px;
+`;
+
+export const Image = styled.Image`
+  margin-top: 15px;
+  height: 173px;
 `;

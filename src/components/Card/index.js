@@ -2,29 +2,31 @@ import React from 'react';
 import {
   Container,
   Header,
+  Name,
   Title,
-  Subtitle,
   Description,
   UserIcon,
   Column,
   Icons,
   LikeIcon,
   SaveIcon,
+  Image,
 } from './style';
 import noUserIcon from '../../assets/images/noPictureUser.png';
 import heartIcon from '../../assets/images/heart.png';
 import saveIcon from '../../assets/images/save.png';
 
-const Card = ({title, subtitle, description, userIcon}) => {
+const Card = ({name, title, description, userIcon, image}) => {
   return (
     <Container>
       <Header>
-        <UserIcon source={userIcon || noUserIcon} />
+        <UserIcon source={userIcon ? {uri: userIcon} : noUserIcon} />
         <Column>
+          <Name>{name}</Name>
           <Title>{title}</Title>
-          <Subtitle>{subtitle}</Subtitle>
         </Column>
       </Header>
+      {image && <Image source={{uri: image}} />}
       <Description>{description}</Description>
       <Icons>
         <LikeIcon source={heartIcon} />
