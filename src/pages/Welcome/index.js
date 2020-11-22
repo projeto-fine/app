@@ -5,7 +5,7 @@ import {Container, Content, LinkText, Logo, Text} from './style';
 
 const Login = ({navigation}) => {
   const handleLogin = () => {
-    navigation.navigate('Login');
+    navigation.navigate('UserArea');
   };
   const handleSignup = () => {
     navigation.navigate('Signup');
