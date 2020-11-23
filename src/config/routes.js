@@ -18,6 +18,7 @@ export default createAppContainer(
     },
     Signup: {
       screen: Signup,
+      navigationOptions: {headerShown: false},
     },
     UserArea: {
       screen: Tabs,
