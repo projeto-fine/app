@@ -2,9 +2,9 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   display: flex;
-  justify-content: center;
   background-color: #efe8e0;
   align-items: center;
+  justify-content: center;
   min-height: 100%;
 `;
 
@@ -13,8 +13,8 @@ export const Content = styled.View`
 `;
 
 export const Logo = styled.Image`
-  width: 258px;
-  height: 72px;
+  width: 300px;
+  height: 80px;
 `;
 
 export const Text = styled.Text`
@@ -35,5 +35,5 @@ export const LinkText = styled.Text`
   color: #3f414e;
   font-size: 16px;
   position: absolute;
-  top: 340px;
+  top: 355px;
 `;

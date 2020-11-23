@@ -8,7 +8,11 @@ import {
   Heading,
   ButtonText,
   Input,
+  PasswordIcon,
+  PasswordInput,
 } from './style';
+import passIcon from '~/assets/images/secure-pass-icon.png';
+
 export default function Signup() {
   return (
     <Container>
@@ -18,10 +22,11 @@ export default function Signup() {
       </GoogleButton>
       <Content>
         <ContentText>OU CADASTRE-SE COM O EMAIL</ContentText>
-        <Input placeholder="NOME"></Input>
-        <Input placeholder="EMAIL"></Input>
-        {/* TODO olhinho pra tirar a visibilidade da senha */}
-        <Input placeholder="SENHA"></Input>
+        <Input placeholder="Nome" />
+        <Input placeholder="Email" />
+        <PasswordInput placeholder="Senha" secureTextEntry={true}>
+          <PasswordIcon source={passIcon} />
+        </PasswordInput>
       </Content>
       <Button text="ENTRAR" />
     </Container>

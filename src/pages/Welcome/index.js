@@ -27,8 +27,10 @@ const Login = ({navigation}) => {
       <Content>
         <Logo source={logoImage} />
         <Text>A educação financeira nunca foi tão fácil</Text>
-        <Button onPress={handleSignup} text="Cadastre-se" />
-        <LinkText onPress={handleLogin}>Já tem conta? Entre aqui</LinkText>
+        <Button onPress={handleLogin} text="ENTRAR" />
+        <LinkText onPress={handleSignup}>
+          Não tem conta? Cadastre-se aqui
+        </LinkText>
       </Content>
     </Container>
   );
