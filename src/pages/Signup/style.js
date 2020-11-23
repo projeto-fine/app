@@ -41,6 +41,16 @@ export const Input = styled.TextInput`
   color: #828282;
 `;
 
+export const PasswordInput = styled.TextInput`
+  width: 270px;
+  background-color: #ececf2;
+  border-radius: 5px;
+  padding: 16px;
+  margin-top: 15px;
+  font-size: 18px;
+  color: #828282;
+`;
+
 export const ContentText = styled.Text`
   color: #ffffff;
   font-size: 16px;
@@ -62,4 +72,9 @@ export const ButtonText = styled.Text`
   color: #000;
   font-size: 16px;
   text-transform: uppercase;
+`;
+
+export const PasswordIcon = styled.Image`
+  width: 27px;
+  height: 27px;
 `;

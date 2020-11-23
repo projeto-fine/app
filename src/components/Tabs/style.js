@@ -1,9 +1,9 @@
 import styled from 'styled-components/native';
 
 export const Icon = styled.Image`
-  width: 25px;
-  height: 25px;
-  margin-bottom: -5px;
+  width: 30px;
+  height: 30px;
+  margin-bottom: -10px;
 `;
 
 export const Heading = styled.Text`

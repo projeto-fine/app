@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import theme from '~/helpers/theme';
 
 export const Container = styled.View`
   margin: 0 auto 20px;
@@ -12,6 +13,8 @@ export const UserIcon = styled.Image`
   width: 45px;
   height: 45px;
   border-radius: 100px;
+  border-color: ${theme.mainColor};
+  border-width: 3px;
 `;
 
 export const Header = styled.View`
@@ -55,7 +58,7 @@ export const LikeIcon = styled.Image`
 `;
 
 export const SaveIcon = styled.Image`
-  width: 18px;
+  width: 22px;
   height: 20px;
   margin-left: 10px;
 `;
