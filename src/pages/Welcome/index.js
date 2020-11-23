@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import logoImage from '../../assets/images/logoHor.png';
 import {
   Button,
@@ -10,8 +11,18 @@ import {
   Text,
 } from './style';
 
+//remove after login implementation
+const saveUserID = async () => {
+  try {
+    await AsyncStorage.setItem('@userId', '5f9d8704a9fc884cfae17fb3');
+  } catch (e) {
+    console.error(e);
+  }
+};
+
 const Login = ({navigation}) => {
   const handleLogin = () => {
+    saveUserID();
     navigation.navigate('UserArea');
   };
 

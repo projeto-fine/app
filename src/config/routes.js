@@ -17,7 +17,7 @@ export default createAppContainer(
     },
     UserArea: {
       screen: Tabs,
-      navigationOptions: {headerShown: false},
+      navigationOptions: {headerShown: false, gestureEnabled: false},
     },
   }),
 );

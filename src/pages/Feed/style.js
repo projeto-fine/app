@@ -4,7 +4,7 @@ export const Heading = styled.Text`
   color: gray;
   text-align: center;
   font-size: 18px;
-  margin-top: 30px;
+  margin-top: 80px;
 `;
 
 export const Container = styled.SafeAreaView`
@@ -13,6 +13,15 @@ export const Container = styled.SafeAreaView`
   height: 100%;
 `;
 
-export const CardList = styled.ScrollView`
-  margin-top: 35px;
+export const View = styled.View`
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  min-height: 90%;
 `;
+
+export const CardList = styled.FlatList`
+  margin-bottom: 50px;
+`;
+
+export const Loading = styled.ActivityIndicator``;

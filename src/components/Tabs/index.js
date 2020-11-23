@@ -3,9 +3,13 @@ import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import Feed from '../../pages/Feed';
 import cursosIcon from '../../assets/images/cursos.png';
+import cursosOutlinedIcon from '../../assets/images/cursos-outlined.png';
 import homeIcon from '../../assets/images/home.png';
-import perfilIcon from '../../assets/images/user.png';
+import homeOutlineIcon from '../../assets/images/home-outlined.png';
+import userIcon from '../../assets/images/user.png';
+import userOutlinedIcon from '../../assets/images/user-outlined.png';
 import {Icon, Heading, Container} from './style';
+import theme from '~/helpers/theme';
 
 const Tab = createBottomTabNavigator();
 
@@ -18,21 +22,38 @@ const workInProgress = () => {
 };
 
 const screenOptions = ({route}) => ({
-  tabBarIcon: () => {
+  tabBarIcon: ({focused}) => {
     switch (route.name) {
       case 'Início':
-        return <Icon source={homeIcon} />;
+        return focused ? (
+          <Icon source={homeIcon} />
+        ) : (
+          <Icon source={homeOutlineIcon} />
+        );
       case 'Cursos':
-        return <Icon source={cursosIcon} />;
+        return focused ? (
+          <Icon source={cursosIcon} />
+        ) : (
+          <Icon source={cursosOutlinedIcon} />
+        );
       case 'Perfil':
-        return <Icon source={perfilIcon} />;
+        return focused ? (
+          <Icon source={userIcon} />
+        ) : (
+          <Icon source={userOutlinedIcon} />
+        );
     }
   },
 });
 
 const tabBarOptions = {
-  activeTintColor: 'black',
-  inactiveTintColor: 'gray',
+  activeTintColor: 'white',
+  inactiveTintColor: 'white',
+  style: {
+    height: 85,
+    backgroundColor: theme.mainColor,
+    borderRadius: 10,
+  },
 };
 
 const Tabs = () => {
