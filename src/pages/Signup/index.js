@@ -2,36 +2,28 @@ import React from 'react';
 import Button from '../../components/Button';
 import {
   Container,
-  Heading,
   Content,
-  Input,
-  LinkText,
   ContentText,
   GoogleButton,
+  Heading,
   ButtonText,
+  Input,
 } from './style';
-
-const Login = ({navigation}) => {
-  const handleSignup = () => {
-    navigation.navigate('Signup');
-  };
+export default function Signup() {
   return (
     <Container>
-      <Heading>Bem-vinde de volta!</Heading>
-      {/* TODO cognito login w google */}
+      <Heading>Crie sua conta!</Heading>
       <GoogleButton>
         <ButtonText>CONTINUE COM O GOOGLE</ButtonText>
       </GoogleButton>
       <Content>
-        <ContentText>OU ENTRE COM O EMAIL</ContentText>
+        <ContentText>OU CADASTRE-SE COM O EMAIL</ContentText>
+        <Input placeholder="NOME"></Input>
         <Input placeholder="EMAIL"></Input>
+        {/* TODO olhinho pra tirar a visibilidade da senha */}
         <Input placeholder="SENHA"></Input>
-        <LinkText>Esqueceu a senha?</LinkText>
       </Content>
       <Button text="ENTRAR" />
-      <LinkText onPress={handleSignup}>Não tem conta? Cadastre-se</LinkText>
     </Container>
   );
-};
-
-export default Login;
+}

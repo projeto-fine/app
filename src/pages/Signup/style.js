@@ -14,21 +14,21 @@ export const Heading = styled.Text`
   font-size: 24px;
   text-align: center;
   margin: 30px 0;
-  color: #f2f2f2; ;
+  color: #f2f2f2;
 `;
 
 export const LinkText = styled.Text`
-  color: #f2f2f2;
+  color: #ffffff;
   margin-top: 10px;
   font-family: 'Open Sans';
   text-align: center;
   text-decoration: underline;
-  text-decoration-color: #f2f2f2;
+  text-decoration-color: #ffffff;
   font-size: 16px;
 `;
 
 export const Content = styled.View`
-  margin: 60px 0;
+  margin: 60px 0 25px;
 `;
 
 export const Input = styled.TextInput`
