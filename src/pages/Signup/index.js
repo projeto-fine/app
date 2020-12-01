@@ -13,7 +13,10 @@ import {
 } from './style';
 import passIcon from '~/assets/images/secure-pass-icon.png';
 
-export default function Signup() {
+export default function Signup({navigation}) {
+  const handleLogin = () => {
+    navigation.navigate('UserArea');
+  };
   return (
     <Container>
       <Heading>Crie sua conta!</Heading>
@@ -28,7 +31,7 @@ export default function Signup() {
           <PasswordIcon source={passIcon} />
         </PasswordInput>
       </Content>
-      <Button text="ENTRAR" />
+      <Button text="ENTRAR" onPress={handleLogin} />
     </Container>
   );
 }

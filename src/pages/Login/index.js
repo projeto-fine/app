@@ -15,6 +15,11 @@ const Login = ({navigation}) => {
   const handleSignup = () => {
     navigation.navigate('Signup');
   };
+
+  const handleLogin = () => {
+    navigation.navigate('UserArea');
+  };
+
   return (
     <Container>
       <Heading>Bem-vinde de volta!</Heading>
@@ -28,7 +33,7 @@ const Login = ({navigation}) => {
         <Input placeholder="SENHA"></Input>
         <LinkText>Esqueceu a senha?</LinkText>
       </Content>
-      <Button text="ENTRAR" />
+      <Button text="ENTRAR" onPress={handleLogin} />
       <LinkText onPress={handleSignup}>Não tem conta? Cadastre-se</LinkText>
     </Container>
   );
