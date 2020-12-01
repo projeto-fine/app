@@ -3,7 +3,7 @@ import Card from './components/Card';
 import {Heading, Container, CardList, View, Loading} from './style';
 import {RefreshControl} from 'react-native';
 import {getPosts, getLatestPosts} from '~/services/feed';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Auth } from 'aws-amplify';
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
@@ -23,9 +23,9 @@ const Feed = () => {
 
   const getUserId = async () => {
     try {
-      const userId = await AsyncStorage.getItem('@userId');
-      if (userId !== null) {
-        setUserId(userId);
+      const { username } = await Auth.currentUserInfo();
+      if (username !== null) {
+        setUserId(username);
       }
     } catch (e) {
       console.log(e);
