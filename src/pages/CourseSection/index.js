@@ -10,14 +10,20 @@ import {
   ModuleCard,
   Image,
   ModuleList,
+  Header,
 } from './style';
 import ChevronRight from '../../assets/images/chevron_right_24px.png';
 
 export default function CourseSection({navigation}) {
   return (
     <Container>
-      <Heading>Educação Financeira</Heading>
-      <Module>1 de 4 concluídos</Module>
+      <Header>
+        <TitleBox>
+          <CourseTitle>Primeiro Salario</CourseTitle>
+        </TitleBox>
+        <Heading>Educação Fiddnanceira</Heading>
+        <Module>1 de 4 concluídos</Module>
+      </Header>
       <ModuleList>
         {[1, 2, 3, 4, 5].map((module, index) => (
           <ModuleCard key={index}>

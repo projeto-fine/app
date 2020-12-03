@@ -6,68 +6,25 @@ export const Heading = styled.Text`
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
-`;
-
-export const SubHeading = styled.Text`
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  color: #454d58;
+  text-align: left;
 `;
 
 export const Container = styled.SafeAreaView`
   display: flex;
   justify-content: center;
+  width: 100%;
   height: 100%;
-  margin: 20px;
-`;
-
-export const CourseCard = styled.View`
-  height: 180px;
-  width: 142px;
-  background-color: ${(props) => props.backgroundColor};
-  border-radius: 10px;
-`;
-
-export const BeginnersHeading = styled.Text`
-  font-family: Open Sans;
-  font-size: 18px;
-  color: ${(props) => props.textColor};
-`;
-
-export const CourseLevelBox = styled.View`
-  width: 61px;
-  height: 21px;
-  margin: 9px 13px;
-  opacity: 0.7;
-  border-radius: 4px;
-  background: #ececf2;
-`;
-
-export const CourseLevelTitle = styled.Text`
-  font-family: Open Sans;
-  font-size: 12px;
-  text-align: center;
-  color: ${(props) => props.textColor};
-`;
-
-export const CourseTitle = styled.Text`
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  color: #ececf2;
-  width: 112px;
-  margin-top: 53px;
-  margin-left: 10px;
+  align-items: center;
 `;
 
 export const CardList = styled.ScrollView`
   max-height: 200px;
+  padding: 10px;
 `;
 
-export const Module = styled.Text``;
+export const Module = styled.Text`
+  margin-bottom: 40px;
+`;
 
 export const ModuleNumber = styled.Text`
   font-family: Open Sans;
@@ -99,7 +56,7 @@ export const ModuleCard = styled.View`
   width: 335px;
   height: 69px;
 
-  margin: 10px 0;
+  margin: 10px;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -109,10 +66,17 @@ export const ModuleCard = styled.View`
 `;
 
 export const Image = styled.Image`
-  margin-left: 53px;
+  margin-left: 43px;
+  height: 16px;
+  width: 12px;
 `;
 
 export const ModuleList = styled.ScrollView`
   margin-top: 20px;
-  max-height: 400px;
+  max-height: 360px;
+`;
+
+export const Header = styled.View`
+  display: flex;
+  width: 335px;
 `;
