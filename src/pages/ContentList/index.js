@@ -5,7 +5,7 @@ import {
   ChevronLeftImage,
   Container,
   Header,
-  ContentList,
+  ContentListContainer,
   ContentCover,
   ContentType,
   ContentHeader,
@@ -17,7 +17,7 @@ import {
 import ChevronLeft from '../../assets/images/chevron_left_24px.png';
 import {Content} from './style';
 
-export default function Module() {
+export default function ContentList() {
   return (
     <Container>
       <Header>
@@ -26,7 +26,7 @@ export default function Module() {
           <CourseTitle>Primeiro Salário</CourseTitle>
         </TitleBox>
       </Header>
-      <ContentList horizontal>
+      <ContentListContainer horizontal>
         {[1, 2, 3].map((item) => (
           <Content>
             <ContentCover />
@@ -40,7 +40,7 @@ export default function Module() {
             </ContentDescription>
           </Content>
         ))}
-      </ContentList>
+      </ContentListContainer>
       <ProfessorContent>
         <ProfessorHeader>Especialista</ProfessorHeader>
         <ProfessorImage />

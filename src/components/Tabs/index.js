@@ -1,5 +1,6 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 import Feed from '../../pages/Feed';
 import cursosIcon from '../../assets/images/cursos.png';
@@ -10,11 +11,36 @@ import userIcon from '../../assets/images/user.png';
 import userOutlinedIcon from '../../assets/images/user-outlined.png';
 import {Icon, Heading, Container} from './style';
 import theme from '~/helpers/theme';
-import Courses from './../../pages/Courses';
 import Profile from './../../pages/Profile';
-import CourseSection from '~/pages/CourseSection/index';
-import Module from '../../pages/Module';
+import CoursesPage from '~/pages/CoursesPage/index';
+import ModulesPage from '~/pages/ModulesPage/index';
+import ContentList from '~/pages/ContentList/index';
+
 const Tab = createBottomTabNavigator();
+const CoursesStack = createStackNavigator();
+
+function CoursesStackScreen() {
+  return (
+    <CoursesStack.Navigator>
+      <CoursesStack.Screen
+        name="CoursesPage"
+        component={CoursesPage}
+        options={{headerShown: false}}
+      />
+      <CoursesStack.Screen
+        name="ModulesPage"
+        component={ModulesPage}
+        options={{headerShown: false}}
+      />
+      <CoursesStack.Screen
+        name="ContentList"
+        component={ContentList}
+        options={{headerShown: false}}
+      />
+      {/* <CoursesStack.Screen name="ContentPage" component={ModuleSection} /> */}
+    </CoursesStack.Navigator>
+  );
+}
 
 const workInProgress = () => {
   return (
@@ -66,7 +92,7 @@ const Tabs = () => {
         screenOptions={screenOptions}
         tabBarOptions={tabBarOptions}>
         <Tab.Screen name="Início" component={Feed} />
-        <Tab.Screen name="Cursos" component={Courses} />
+        <Tab.Screen name="Cursos" component={CoursesStackScreen} />
         <Tab.Screen name="Perfil" component={Profile} />
       </Tab.Navigator>
     </NavigationContainer>

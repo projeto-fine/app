@@ -53,7 +53,7 @@ export const ModuleTitle = styled.Text`
   color: #6114d4;
 `;
 
-export const ModuleCard = styled.View`
+export const ModuleCard = styled.TouchableOpacity`
   width: 335px;
   height: 69px;
 

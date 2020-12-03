@@ -18,7 +18,7 @@ import {
 import ChevronRight from '../../assets/images/chevron_right_24px.png';
 import ChevronLeft from '../../assets/images/chevron_left_24px.png';
 
-export default function CourseSection({navigation}) {
+export default function ModulesPage({navigation}) {
   return (
     <Container>
       <Header>
@@ -31,7 +31,9 @@ export default function CourseSection({navigation}) {
       </Header>
       <ModuleList>
         {[1, 2, 3, 4, 5].map((module, index) => (
-          <ModuleCard key={index}>
+          <ModuleCard
+            key={index}
+            onPress={() => navigation.navigate('ContentList')}>
             <ModuleNumber>{index + 1}.</ModuleNumber>
             <ModuleContent>
               <ModuleTitle>Valor</ModuleTitle>

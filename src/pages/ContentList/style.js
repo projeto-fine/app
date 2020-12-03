@@ -44,7 +44,7 @@ export const Content = styled.View`
   background: #efe8e0;
   border-radius: 14px;
 `;
-export const ContentList = styled.ScrollView`
+export const ContentListContainer = styled.ScrollView`
   display: flex;
   flex-direction: row;
   margin: 0 10px 0 25px;

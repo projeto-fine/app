@@ -42,7 +42,6 @@ const Login = ({navigation}) => {
   return (
     <Container>
       <Heading>Bem-vinde de volta!</Heading>
-      {/* TODO cognito login w google */}
       <GoogleButton>
         <ButtonText>CONTINUE COM O GOOGLE</ButtonText>
       </GoogleButton>

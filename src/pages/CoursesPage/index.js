@@ -11,7 +11,8 @@ import {
   SubHeading,
 } from './style';
 import ProgressBar from '../../components/ProgressBar';
-const Courses = ({navigation}) => {
+
+const CoursesPage = ({navigation}) => {
   const cursos = [
     {
       name: 'Primeiros Passos',
@@ -41,7 +42,10 @@ const Courses = ({navigation}) => {
       <BeginnersHeading textColor="#6114D4">Começando agora</BeginnersHeading>
       <CardList horizontal>
         {cursos.map((item, index) => (
-          <CourseCard backgroundColor="#917FFB" key={index}>
+          <CourseCard
+            backgroundColor="#917FFB"
+            key={index}
+            onPress={() => navigation.navigate('ModulesPage')}>
             <CourseLevelBox>
               <CourseLevelTitle textColor="#6114d4">
                 {item.level}
@@ -70,4 +74,4 @@ const Courses = ({navigation}) => {
   );
 };
 
-export default Courses;
+export default CoursesPage;
