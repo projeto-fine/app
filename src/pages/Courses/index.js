@@ -7,12 +7,12 @@ import {
   CourseCard,
   BeginnersHeading,
   CourseTitle,
-  ProgressBar,
-  ProgressBarInside,
   CourseLevelBox,
   CourseLevelTitle,
   CardList,
 } from './style';
+import ProgressBar from '../../components/ProgressBar';
+git;
 
 const Courses = ({navigation}) => {
   const cursos = [
@@ -37,23 +37,27 @@ const Courses = ({navigation}) => {
       progress: 40,
     },
   ];
+  const handleCourse = () => {
+    navigation.navigate('Signup');
+  };
   return (
     <Container>
       <Heading>Oi, Anna</Heading>
       <SubHeading>Quantos pontos você irá ganhar hoje?</SubHeading>
       <BeginnersHeading textColor="#6114D4">Começando agora</BeginnersHeading>
       <CardList horizontal>
-        {cursos.map((item) => (
-          <CourseCard backgroundColor="#917FFB">
+        {cursos.map((item, index) => (
+          <CourseCard
+            backgroundColor="#917FFB"
+            key={index}
+            onPress={handleCourse}>
             <CourseLevelBox>
               <CourseLevelTitle textColor="#6114d4">
                 {item.level}
               </CourseLevelTitle>
             </CourseLevelBox>
             <CourseTitle>{item.name}</CourseTitle>
-            <ProgressBar>
-              <ProgressBarInside progress={item.progress} />
-            </ProgressBar>
+            <ProgressBar progress={item.progress} />
           </CourseCard>
         ))}
       </CardList>
@@ -67,9 +71,7 @@ const Courses = ({navigation}) => {
               </CourseLevelTitle>
             </CourseLevelBox>
             <CourseTitle>{item.name}</CourseTitle>
-            <ProgressBar>
-              <ProgressBarInside progress={item.progress} />
-            </ProgressBar>
+            <ProgressBar progress={item.progress} />
           </CourseCard>
         ))}
       </CardList>
