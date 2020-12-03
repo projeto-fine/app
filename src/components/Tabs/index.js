@@ -13,7 +13,7 @@ import theme from '~/helpers/theme';
 import Courses from './../../pages/Courses';
 import Profile from './../../pages/Profile';
 import CourseSection from '~/pages/CourseSection/index';
-
+import Module from '../../pages/Module';
 const Tab = createBottomTabNavigator();
 
 const workInProgress = () => {
@@ -66,7 +66,7 @@ const Tabs = () => {
         screenOptions={screenOptions}
         tabBarOptions={tabBarOptions}>
         <Tab.Screen name="Início" component={Feed} />
-        <Tab.Screen name="Cursos" component={CourseSection} />
+        <Tab.Screen name="Cursos" component={Courses} />
         <Tab.Screen name="Perfil" component={Profile} />
       </Tab.Navigator>
     </NavigationContainer>

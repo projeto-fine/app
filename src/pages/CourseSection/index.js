@@ -11,17 +11,22 @@ import {
   Image,
   ModuleList,
   Header,
+  TitleBox,
+  CourseTitle,
+  ChevronLeftImage,
 } from './style';
 import ChevronRight from '../../assets/images/chevron_right_24px.png';
+import ChevronLeft from '../../assets/images/chevron_left_24px.png';
 
 export default function CourseSection({navigation}) {
   return (
     <Container>
       <Header>
         <TitleBox>
+          <ChevronLeftImage source={ChevronLeft} />
           <CourseTitle>Primeiro Salario</CourseTitle>
         </TitleBox>
-        <Heading>Educação Fiddnanceira</Heading>
+        <Heading>Educação Financeira</Heading>
         <Module>1 de 4 concluídos</Module>
       </Header>
       <ModuleList>

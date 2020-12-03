@@ -40,6 +40,7 @@ export const ModuleContent = styled.View`
   display: flex;
   justify-content: center;
   margin-left: 10px;
+  margin-right: 43px;
 `;
 
 export const ModuleTitle = styled.Text`
@@ -66,17 +67,40 @@ export const ModuleCard = styled.View`
 `;
 
 export const Image = styled.Image`
-  margin-left: 43px;
   height: 16px;
-  width: 12px;
+  width: 10px;
+`;
+export const ChevronLeftImage = styled.Image`
+  height: 24px;
+  width: 24px;
 `;
 
 export const ModuleList = styled.ScrollView`
   margin-top: 20px;
+  margin-bottom: 120px;
   max-height: 360px;
 `;
 
 export const Header = styled.View`
   display: flex;
   width: 335px;
+`;
+
+export const TitleBox = styled.View`
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+`;
+
+export const CourseTitle = styled.Text`
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  margin-left: 40px;
+  /* identical to box height */
+
+  color: #6114d4;
 `;

@@ -6,6 +6,7 @@ import Login from '../pages/Login';
 import CourseSection from '../pages/CourseSection';
 import Signup from '../pages/Signup';
 import Tabs from '../components/Tabs';
+import Module from '../pages/Module';
 
 export default createAppContainer(
   createStackNavigator({
@@ -27,6 +28,10 @@ export default createAppContainer(
     },
     CourseSection: {
       screen: CourseSection,
+      navigationOptions: {headerShown: false, gestureEnabled: false},
+    },
+    Module: {
+      screen: Module,
       navigationOptions: {headerShown: false, gestureEnabled: false},
     },
   }),
