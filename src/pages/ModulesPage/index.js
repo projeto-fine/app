@@ -1,31 +1,32 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ProgressBar from '~/components/ProgressBar/index';
+import theme from '~/helpers/theme';
+import ChevronRight from '../../assets/images/chevron_right_24px.png';
 import {
   Container,
-  Heading,
-  Module,
-  ModuleNumber,
-  ModuleContent,
-  ModuleTitle,
-  ModuleCard,
-  Image,
-  ModuleList,
   Header,
-  TitleBox,
-  CourseTitle,
-  ChevronLeftImage,
+  Heading,
+  Image,
+  Module,
+  ModuleCard,
+  ModuleContent,
+  ModuleList,
+  ModuleNumber,
+  ModuleTitle,
 } from './style';
-import ChevronRight from '../../assets/images/chevron_right_24px.png';
-import ChevronLeft from '../../assets/images/chevron_left_24px.png';
 
 export default function ModulesPage({navigation}) {
+  useEffect(() => {
+    navigation.setOptions({
+      title: 'Educação Financeira',
+      headerTintColor: theme.mainColor,
+      headerBackTitle: ' ',
+    });
+  }, []);
+
   return (
     <Container>
       <Header>
-        <TitleBox>
-          <ChevronLeftImage source={ChevronLeft} />
-          <CourseTitle>Primeiro Salario</CourseTitle>
-        </TitleBox>
         <Heading>Educação Financeira</Heading>
         <Module>1 de 4 concluídos</Module>
       </Header>

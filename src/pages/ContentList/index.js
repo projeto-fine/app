@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   TitleBox,
   CourseTitle,
@@ -17,8 +17,17 @@ import {
 } from './style';
 import ChevronLeft from '../../assets/images/chevron_left_24px.png';
 import {Content} from './style';
+import theme from '~/helpers/theme';
 
-export default function ContentList() {
+export default function ContentList({navigation}) {
+  useEffect(() => {
+    navigation.setOptions({
+      title: 'Primeiro Salário',
+      headerTintColor: theme.mainColor,
+      headerBackTitle: ' ',
+    });
+  }, []);
+
   const content = [
     {
       contentType: 'Video Aula',
@@ -37,15 +46,11 @@ export default function ContentList() {
   ];
   return (
     <Container>
-      <Header>
-        <TitleBox>
-          <ChevronLeftImage source={ChevronLeft} />
-          <CourseTitle>Primeiro Salário</CourseTitle>
-        </TitleBox>
-      </Header>
       <ContentListContainer horizontal>
         {content.map((item, index) => (
-          <Content key={index}>
+          <Content
+            key={index}
+            onPress={() => navigation.navigate('ContentPage')}>
             <ContentCover source={{uri: item.imageUrl}} />
             <ContentHeader>
               <ContentType>{item.contentType}</ContentType>

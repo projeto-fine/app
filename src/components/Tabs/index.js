@@ -15,6 +15,7 @@ import Profile from './../../pages/Profile';
 import CoursesPage from '~/pages/CoursesPage/index';
 import ModulesPage from '~/pages/ModulesPage/index';
 import ContentList from '~/pages/ContentList/index';
+import ContentPage from '~/pages/ContentPage/index';
 
 const Tab = createBottomTabNavigator();
 const CoursesStack = createStackNavigator();
@@ -27,17 +28,9 @@ function CoursesStackScreen() {
         component={CoursesPage}
         options={{headerShown: false}}
       />
-      <CoursesStack.Screen
-        name="ModulesPage"
-        component={ModulesPage}
-        options={{headerShown: false}}
-      />
-      <CoursesStack.Screen
-        name="ContentList"
-        component={ContentList}
-        options={{headerShown: false}}
-      />
-      {/* <CoursesStack.Screen name="ContentPage" component={ModuleSection} /> */}
+      <CoursesStack.Screen name="ModulesPage" component={ModulesPage} />
+      <CoursesStack.Screen name="ContentList" component={ContentList} />
+      <CoursesStack.Screen name="ContentPage" component={ContentPage} />
     </CoursesStack.Navigator>
   );
 }

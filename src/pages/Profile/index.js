@@ -12,25 +12,21 @@ import {
   FolderImage,
   FolderName,
 } from './style';
-import {getUserInfo} from '~/services/feed';
 
 const Profile = ({navigation}) => {
-  const getUser = async () => {
-    const res = await getUserInfo();
-  };
-
-  useEffect(() => {
-    getUser();
-  }, []);
-
   return (
     <Container>
       <Header>
-        <ProfileImage />
+        <ProfileImage
+          source={{
+            uri:
+              'https://avatars2.githubusercontent.com/u/11897614?s=460&u=7a8341c2b97e26c854515421e046326198879860&v=4',
+          }}
+        />
         <RightColumn>
-          <UserName>Rafaela Cabral</UserName>
+          <UserName>Anna Gabriela</UserName>
           <UserPoints>1225 pontos</UserPoints>
-          <UserLevel>1225 pontos</UserLevel>
+          <UserLevel>Iniciante</UserLevel>
         </RightColumn>
       </Header>
       <Title>Publicações salvas:</Title>

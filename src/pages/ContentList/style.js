@@ -37,7 +37,7 @@ export const Header = styled.View`
   width: 335px;
 `;
 
-export const Content = styled.View`
+export const Content = styled.TouchableOpacity`
   width: 193px;
   height: 306px;
   margin: 10px;

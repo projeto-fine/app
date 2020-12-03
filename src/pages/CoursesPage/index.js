@@ -17,7 +17,7 @@ const CoursesPage = ({navigation}) => {
     {
       name: 'Primeiros Passos',
       level: 'Iniciante',
-      progress: 0,
+      progress: 60,
     },
     {
       name: 'Educação Financeira',
