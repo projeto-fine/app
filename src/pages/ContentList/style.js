@@ -51,9 +51,8 @@ export const ContentListContainer = styled.ScrollView`
   max-height: 330px;
 `;
 
-export const ContentCover = styled.View`
+export const ContentCover = styled.Image`
   height: 170px;
-  background-color: black;
   border-radius: 14px;
 `;
 
@@ -98,10 +97,11 @@ export const ProfessorContent = styled.View`
   height: 200px;
 `;
 
-export const ProfessorImage = styled.View`
+export const ProfessorImage = styled.Image`
   width: 77px;
   height: 77px;
   border-radius: 50px;
-  background-color: black;
   margin: 20px 0;
 `;
+
+export const ProfessorName = styled.Text``;

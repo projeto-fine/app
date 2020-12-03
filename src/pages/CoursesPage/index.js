@@ -58,8 +58,8 @@ const CoursesPage = ({navigation}) => {
       </CardList>
       <BeginnersHeading textColor="#D64853">Chegando Lá</BeginnersHeading>
       <CardList horizontal>
-        {cursos.map((item) => (
-          <CourseCard backgroundColor="#D64853">
+        {cursos.map((item, index) => (
+          <CourseCard key={index} backgroundColor="#D64853">
             <CourseLevelBox>
               <CourseLevelTitle textColor="#CC3936">
                 {item.level}
