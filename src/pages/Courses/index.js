@@ -1,17 +1,16 @@
 import React from 'react';
-import logoImage from '../../assets/images/logoHor.png';
 import {
-  Container,
-  Heading,
-  SubHeading,
-  CourseCard,
   BeginnersHeading,
-  CourseTitle,
-  ProgressBar,
-  ProgressBarInside,
+  CardList,
+  Container,
+  CourseCard,
   CourseLevelBox,
   CourseLevelTitle,
-  CardList,
+  CourseTitle,
+  Heading,
+  ProgressBar,
+  ProgressBarInside,
+  SubHeading,
 } from './style';
 
 const Courses = ({navigation}) => {
