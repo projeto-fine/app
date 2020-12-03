@@ -11,6 +11,7 @@ import userOutlinedIcon from '../../assets/images/user-outlined.png';
 import {Icon, Heading, Container} from './style';
 import theme from '~/helpers/theme';
 import Courses from './../../pages/Courses';
+import Profile from './../../pages/Profile';
 
 const Tab = createBottomTabNavigator();
 
@@ -65,7 +66,7 @@ const Tabs = () => {
         tabBarOptions={tabBarOptions}>
         <Tab.Screen name="Início" component={Feed} />
         <Tab.Screen name="Cursos" component={Courses} />
-        <Tab.Screen name="Perfil" component={workInProgress} />
+        <Tab.Screen name="Perfil" component={Profile} />
       </Tab.Navigator>
     </NavigationContainer>
   );

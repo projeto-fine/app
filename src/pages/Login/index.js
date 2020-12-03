@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Alert } from 'react-native';
+import React, {useState} from 'react';
+import {Alert} from 'react-native';
 import Button from '../../components/Button';
 import {
   Container,
@@ -11,30 +11,30 @@ import {
   GoogleButton,
   ButtonText,
 } from './style';
-import { Auth } from 'aws-amplify';
+import {Auth} from 'aws-amplify';
 
 const Login = ({navigation}) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('aaba@cesar.school');
+  const [password, setPassword] = useState('Passw0rd!');
 
   const handleSignup = () => {
     navigation.navigate('Signup');
   };
-  
+
   const handleLogin = async () => {
     try {
       await Auth.signIn(email, password);
       navigation.navigate('UserArea');
     } catch (e) {
       Alert.alert(
-        "Tente novamente",
-        "E-mail ou senha inválidos",
+        'Tente novamente',
+        'E-mail ou senha inválidos',
         [
           {
-            text: "Ok"
-          }
+            text: 'Ok',
+          },
         ],
-        { cancelable: false }
+        {cancelable: false},
       );
     }
   };
@@ -48,8 +48,15 @@ const Login = ({navigation}) => {
       </GoogleButton>
       <Content>
         <ContentText>OU ENTRE COM O EMAIL</ContentText>
-        <Input placeholder="EMAIL" value={email} onChangeText={setEmail}></Input>
-        <Input placeholder="SENHA" value={password} onChangeText={setPassword} secureTextEntry></Input>
+        <Input
+          placeholder="EMAIL"
+          value={email}
+          onChangeText={setEmail}></Input>
+        <Input
+          placeholder="SENHA"
+          value={password}
+          onChangeText={setPassword}
+          secureTextEntry></Input>
         <LinkText>Esqueceu a senha?</LinkText>
       </Content>
       <Button text="ENTRAR" onPress={handleLogin} />

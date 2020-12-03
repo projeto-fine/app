@@ -3,7 +3,7 @@ import Card from './components/Card';
 import {Heading, Container, CardList, View, Loading} from './style';
 import {RefreshControl} from 'react-native';
 import {getPosts, getLatestPosts} from '~/services/feed';
-import { Auth } from 'aws-amplify';
+import {getUserId} from '~/helpers/utils';
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
@@ -21,20 +21,14 @@ const Feed = () => {
     setNextPage(res.nextPage);
   };
 
-  const getUserId = async () => {
-    try {
-      const { username } = await Auth.currentUserInfo();
-      if (username !== null) {
-        setUserId(username);
-      }
-    } catch (e) {
-      console.log(e);
-    }
+  const getUserInfo = async () => {
+    const userId = await getUserId();
+    setUserId(userId);
   };
 
   useEffect(() => {
     setLoading(true);
-    getUserId();
+    getUserInfo();
     fetchPosts();
   }, []);
 
